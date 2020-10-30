@@ -1,0 +1,16 @@
+﻿@model ErrorViewModel
+@{
+    ViewData["Title"] = "Error";
+}
+    <div class="d-flex justify-content-center align-items-center align-middle" style="height: 40vh" id="main">
+        <h1 class="display-3 mr-3 pr-3 align-top border-right inline-block align-content-center">@Model.ResponseCode</h1>
+        <div class="inline-block align-middle">
+            <h2 class="display-4 font-weight-normal lead" id="desc">@Model.ResponseMessage</h2>
+        </div>
+    </div>
+@if (Model.ShowRequestId)
+{
+    <p class="text-center">
+        Request ID: <code>@Model.RequestId</code>
+    </p>
+}
