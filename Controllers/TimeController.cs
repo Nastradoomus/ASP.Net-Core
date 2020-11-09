@@ -18,7 +18,8 @@ namespace MVC.Controllers
 
         private readonly IWebHostEnvironment _env;
 
-         private readonly IConfiguration _config;
+        private readonly IConfiguration _config;
+        
         private readonly IErrorMessage _err;
 
         public TimeController(ILogger<TimeController> logger, IWebHostEnvironment env, IConfiguration config, IErrorMessage err)
