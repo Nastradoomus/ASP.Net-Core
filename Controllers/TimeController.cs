@@ -8,7 +8,6 @@ using Microsoft.Extensions.Configuration;
 using MVC.Models;
 using MVC.Components.Helpers;
 
-interface Person {}
 namespace MVC.Controllers
 {
     [Route("[controller]")]
