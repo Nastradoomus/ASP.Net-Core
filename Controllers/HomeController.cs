@@ -1,40 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using MVC.Models;
-using Microsoft.AspNetCore.Http;
-using MVC.Components.Helpers;
+﻿using Microsoft.AspNetCore.Mvc;
 
 namespace MVC.Controllers
 {
-    public class HomeController : Controller
+   public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        public HomeController()
+        { }
 
-        public HomeController(ILogger<HomeController> logger)
-        {
-            _logger = logger;
-        }
-
+        [Route("Home")]
+        [Route("Home/Index")]
+        [Route("Home/Index/{id:int:maxlength(3):minlength(1)?}")]
         public IActionResult Index()
         {
             return View();
         }
 
+        [Route("Home/Privacy")]
+        [Route("Home/Privacy/{id?}")]
         public IActionResult Privacy()
         {
             return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            var ErrorMessage = new ErrorMessage{ ErrorType = "Request", ErrorCode = Response.StatusCode }.GetMessage();
-            return View(new ErrorViewModel {ResponseMessage = ErrorMessage, ResponseCode = Response.StatusCode ,RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }
 }

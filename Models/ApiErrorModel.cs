@@ -1,10 +1,10 @@
 namespace MVC.Models
 {
-    public class ErrorViewModel
+    public class ApiErrorModel
     {
-        public  int ResponseCode { get; set; }
+        public string Message { get; set; }
 
-        public string ResponseMessage { get; set; }
+        public string Information { get; set; }
 
         public string RequestId { get; set; }
 

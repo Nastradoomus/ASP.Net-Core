@@ -4,4 +4,10 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="AspNetCoreRateLimit" Version="3.2.1" />
+    <PackageReference Include="NReco.Logging.File" Version="1.1.0" />
+    <PackageReference Include="ObjectDumper.NET" Version="3.0.20251.1" />
+  </ItemGroup>
+
 </Project>
