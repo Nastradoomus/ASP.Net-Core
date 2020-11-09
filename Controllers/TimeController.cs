@@ -64,7 +64,7 @@ namespace MVC.Controllers
             return StatusCode(403, error);
         // Should be handled through exception handling: https://stackoverflow.com/questions/38630076/asp-net-core-web-api-exception-handling
         // Too much hassle for this project 😔. With execption handling we should separate all CRUD operation exceptions since we are replying to GET as
-        // a Razor template and POST as a JSON.
+        // a Razor template and /api/ GET and POST as a JSON.
         }
 
         [HttpPost("~/api/time/{id:int}")]
